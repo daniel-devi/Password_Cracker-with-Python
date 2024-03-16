@@ -59,7 +59,6 @@ def crack_password(password):
             allGeneratedPassword.append(tryPassword)
             cracking_code = "............\n"
             print(cracking_code)
-            time.sleep(2)
     
     
     endTime = time.time()
