@@ -57,9 +57,6 @@ def crack_password(password):
             attempts+= 1
             tryPassword = create_pw(len(password))
             allGeneratedPassword.append(tryPassword)
-            cracking_code = "............\n"
-            print(cracking_code)
-            time.sleep(2)
     
     
     endTime = time.time()
@@ -67,6 +64,9 @@ def crack_password(password):
 
     # Open the file in write mode ('w')
     with open("passwordtried.txt", mode="w") as file:
+        file.write("\n".join(allGeneratedPassword))
+        
+    with open("password.txt", mode="w") as file:
         file.write("\n".join(allGeneratedPassword))
        
     print(f"Password Succesfuly Cracked\n After {attempts} attempts\n In {totalTime+0.25:.4f}Seconds")
