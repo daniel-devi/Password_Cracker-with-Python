@@ -57,6 +57,7 @@ def crack_password(password):
             attempts+= 1
             tryPassword = create_pw(len(password))
             allGeneratedPassword.append(tryPassword)
+          
     
     
     endTime = time.time()
